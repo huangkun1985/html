@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深圳市境外旅客购物离境退税商店名单汇总</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .filter-container label {
+            font-weight: bold;
+        }
+        .filter-container select {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e9e9e9;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+        .brand-col { width: 15%; }
+        .district-col { width: 10%; }
+        .address-col { width: 35%; }
+        .desc-col { width: 15%; }
+        .products-col { width: 25%; }
+    </style>
+</head>
+<body>
+
+    <h1>深圳市境外旅客购物离境退税商店名单汇总</h1>
+    <h2>(Consolidated List of Shenzhen Departure Tax Refund Stores for Overseas Travelers)</h2>
+
+    <div class="filter-container">
+        <label for="district-filter">按区域筛选 (Filter by District):</label>
+        <select id="district-filter">
+            <option value="all">所有区域 (All Districts)</option>
+            <!-- Options will be populated by JavaScript -->
+        </select>
+
+        <label for="brand-filter">按品牌/商店筛选 (Filter by Brand/Store):</label>
+        <select id="brand-filter">
+            <option value="all">所有品牌/商店 (All Brands/Stores)</option>
+            <!-- Options will be populated by JavaScript -->
+        </select>
+    </div>
+
+    <table id="store-table">
+        <thead>
+            <tr>
+                <th class="brand-col">品牌/商店名称 (Brand/Store Name)</th>
+                <th class="district-col">区域 (District)</th>
+                <th class="address-col">经营地址 (Address)</th>
+                <th class="desc-col">简介 (Brief Description)</th>
+                <th class="products-col">可能售卖的产品 (Potential Products)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated here -->
+            <!-- Example Row Structure:
+            <tr>
+                <td>Brand Name</td>
+                <td>District</td>
+                <td>Full Address</td>
+                <td>Brief description of the brand/store.</td>
+                <td>Product categories sold.</td>
+            </tr>
+            -->
+        <!-- Data from 深圳市第五批境外旅客购物离境退税商店名单.docx -->
+            <tr>
+                <td>茂业百货 (Moi Department Store)</td>
+                <td>福田区</td>
+                <td>深圳市福田区华强北街道华航社区华强北路2009号东方时代广场-1层101-901层</td>
+                <td>大型综合百货公司 (Large comprehensive department store)</td>
+                <td>服饰、化妆品、鞋包、家居用品、珠宝、电器等 (Apparel, cosmetics, shoes & bags, home goods, jewelry, appliances, etc.)</td>
+            </tr>
+            <tr>
+                <td>卡地亚 (Cartier)</td>
+                <td>罗湖区</td>
+                <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼S167号商铺</td>
+                <td>法国奢侈品品牌 (French luxury goods brand) - 历峰集团旗下</td>
+                <td>珠宝、腕表、皮具、配饰 (Jewelry, watches, leather goods, accessories)</td>
+            </tr>
+             <tr>
+                <td>万国表 (IWC Schaffhausen)</td>
+                <td>罗湖区</td>
+                <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼S165号商铺</td>
+                <td>瑞士高级钟表制造商 (Swiss luxury watch manufacturer) - 历峰集团旗下</td>
+                <td>腕表 (Watches)</td>
+            </tr>
+            <tr>
+                <td>积家 (Jaeger-LeCoultre)</td>
+                <td>罗湖区</td>
+                <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼S166号商铺</td>
+                <td>瑞士高级钟表制造商 (Swiss luxury watch manufacturer) - 历峰集团旗下</td>
+                <td>腕表 (Watches)</td>
+            </tr>
+            <tr>
+                <td>梵克雅宝 (Van Cleef & Arpels)</td>
+                <td>罗湖区</td>
+                <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼S135号商铺</td>
+                <td>法国奢侈珠宝、腕表和香水品牌 (French luxury jewelry, watch and perfume brand) - 历峰集团旗下</td>
+                <td>高级珠宝、腕表、香水 (High jewelry, watches, perfumes)</td>
+            </tr>
+            <tr>
+                <td>伯爵 (Piaget)</td>
+                <td>罗湖区</td>
+                <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼S136号商铺</td>
+                <td>瑞士奢侈腕表及珠宝品牌 (Swiss luxury watch and jewelry brand) - 历峰集团旗下</td>
+                <td>腕表、珠宝 (Watches, jewelry)</td>
+            </tr>
+            <tr>
+                <td>宇舶表 (Hublot)</td>
+                <td>罗湖区</td>
+                <td>深圳市罗湖区桂园街道人民桥社区深南东路5001号万象城一期二楼243号商铺</td>
+                <td>瑞士奢华腕表品牌 (Swiss luxury watch brand) - LVMH集团旗下</td>
+                <td>腕表 (Watches)</td>
+            </tr>
+             <tr>
+                <td>真力时 (Zenith)</td>
+                <td>罗湖区</td>
+                <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城二期D栋1楼S155号商铺</td>
+                <td>瑞士高级钟表制造商 (Swiss luxury watch manufacturer) - LVMH集团旗下</td>
+                <td>腕表 (Watches)</td>
+            </tr>
+            <tr>
+                <td>泰格豪雅 (TAG Heuer)</td>
+                <td>罗湖区</td>
+                <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城二期D栋1楼S153号商铺</td>
+                <td>瑞士奢华腕表品牌 (Swiss luxury watch brand) - LVMH集团旗下</td>
+                <td>腕表、计时码表 (Watches, chronographs)</td>
+            </tr>
+        <!-- Data from 深圳市第三批境外旅客购物离境退税商店名单.docx -->
+            <tr>
+                <td>小米之家 (Xiaomi Store)</td>
+                <td>南山区</td>
+                <td>南山区华润万象天地NL162、NL262号商铺</td>
+                <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td>
+                <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td>
+            </tr>
+            <tr>
+                <td>小米之家 (Xiaomi Store)</td>
+                <td>福田区</td>
+                <td>福田区深南中路1095号星璨新城市广场G层1027-1028号商铺</td>
+                <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td>
+                <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td>
+            </tr>
+            <tr>
+                <td>小米之家 (Xiaomi Store)</td>
+                <td>宝安区</td>
+                <td>宝安区宝安国际机场T3航站楼4L-01-05和4L-01-06</td>
+                <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td>
+                <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td>
+            </tr>
+            <tr>
+                <td>太阳百货 (Sun Department Store)</td>
+                <td>罗湖区</td>
+                <td>罗湖区解放路2001号利联太阳广场1至7层</td>
+                <td>大型综合百货公司 (Large comprehensive department store)</td>
+                <td>服饰、化妆品、鞋包、黄金珠宝、家居用品等 (Apparel, cosmetics, shoes & bags, gold & jewelry, home goods, etc.)</td>
+            </tr>
+            <!-- RenRenLe entries -->
+            <tr> <td>人人乐 (RenRenLe)</td> <td>南山区</td> <td>深圳市南山区南山街道荔湾社区前海路0070号泛海城市广场B101</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>福田区</td> <td>深圳市福田区福田街道金田路银庄大厦1-3层</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>南山区</td> <td>深圳市南山区学府路学府花园旁</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>南山区</td> <td>深圳市南山区南头街道前海路与学府路交汇处新德家园裙楼1-3层部分</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>宝安区</td> <td>深圳市宝安区前进二路世外桃源28栋裙楼负一层、一层、二层</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>南山区</td> <td>深圳市南山区科技南路滨福世纪广场负一楼F02、F03、F04、F05</td> <td>连锁超市 (Supermarket chain)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>盐田区</td> <td>深圳市盐田区盐田路金港盛世华庭一层商场及二层商场左侧、东侧</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>宝安区</td> <td>深圳市宝安区新安街道宝城76区锦花路电影综合大厦一、二、三楼</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>南山区</td> <td>深圳市南山区公园南路联合工业村厂房B栋一至三层</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>龙华区</td> <td>深圳市龙华区民治街道新牛社区锦绣江南四期1057、1058、2001</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>宝安区</td> <td>深圳市宝安区西乡街道海城路白金假日公寓裙楼1楼内铺、2楼、3楼</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>南山区</td> <td>深圳市南山区东滨路339号华联城市花园一期地下一层</td> <td>连锁超市 (Supermarket chain)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>龙华区</td> <td>深圳市龙华新区民治街道龙华拓展区书香门第上河坊4栋1A-2层</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>宝安区</td> <td>深圳市宝安区西乡街道劳动社区西乡兴业路与悦和路交汇处劳动综合楼西乡劳动商业大楼2层</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>宝安区</td> <td>深圳市宝安区宝城中心区N8区金泓凯旋城11栋164、165、166、12栋160、167</td> <td>大型连锁超市 (Large supermarket chain)</td> <td>生鲜食品、包装食品、日用品、家电 (Groceries, packaged food, daily necessities, home appliances)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>光明区</td> <td>深圳市光明新区公明街道宏发上域花园1栋楼商铺127、K7（1）A</td> <td>连锁超市 (Supermarket chain)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>龙岗区</td> <td>深圳市龙岗区坂田街道五和社区五和大道（南）118号和成世纪名园三栋A座一楼</td> <td>连锁超市 (Supermarket chain)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>龙岗区</td> <td>深圳市龙岗区龙城街道中心城爱龙路18号瑞华园地下室D101---118</td> <td>连锁超市 (Supermarket chain)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>坪山区</td> <td>深圳市坪山新区坑梓街道翠景路56号南门嘉邻中心二楼</td> <td>连锁超市 (Supermarket chain)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>南山区</td> <td>深圳市南山区蛇口街道东滨路三湘海尚花园一期D064-D074</td> <td>生活超市 (Lifestyle supermarket)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>南山区</td> <td>深圳市南山区西丽街道留仙大道2188号天悦南湾小区负一层及一层部分</td> <td>生活超市 (Lifestyle supermarket)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>南山区</td> <td>深圳市南山区南山街道前海路70号泛海城市广场1栋B1-01</td> <td>生活超市 (Lifestyle supermarket)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>宝安区</td> <td>深圳市宝安区福海街道宝安大道与耗业路交汇处同泰总部产业园厂房3栋L1-62、L2-58号商铺</td> <td>生活超市 (Lifestyle supermarket)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>南山区</td> <td>深圳市南山区招商街道赤湾四路36号海景大厦一楼105号铺</td> <td>生活超市 (Lifestyle supermarket)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>龙华区</td> <td>深圳市龙华区福城街道万科金域九悦花园20栋147、148、149、150、151号商铺</td> <td>生活超市 (Lifestyle supermarket)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>坪山区</td> <td>深圳市坪山区坪山街道招商花园2栋CS2、5栋CS1</td> <td>生活超市 (Lifestyle supermarket)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>南山区</td> <td>深圳市南山区桃源街道平山社区留仙大道4088号博林天瑞花园(二期)10号楼125、144至151</td> <td>生活超市 (Lifestyle supermarket)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <tr> <td>人人乐 (RenRenLe)</td> <td>宝安区</td> <td>深圳市宝安区石岩街道浪心社区人人乐物流中心主楼101</td> <td>生活超市 (Lifestyle supermarket)</td> <td>生鲜食品、包装食品、日用品 (Groceries, packaged food, daily necessities)</td> </tr>
+            <!-- End RenRenLe entries -->
+            <tr>
+                <td>益田假日广场 (Yitian Holiday Plaza)</td>
+                <td>南山区</td>
+                <td>南山区沙河街道益田假日广场1-301</td>
+                <td>大型购物中心 (Large shopping mall)</td>
+                <td>国际品牌服饰、餐饮、娱乐、超市、影院等 (International fashion brands, dining, entertainment, supermarket, cinema, etc.)</td>
+            </tr>
+            <tr>
+                <td>梵思诺 (Versino)</td>
+                <td>宝安区</td>
+                <td>宝安区宝安国际机场T3航站楼4L-02-04</td>
+                <td>中国高端商务男装品牌 (Chinese high-end business menswear brand)</td>
+                <td>男士西装、衬衫、夹克、休闲服饰、配饰 (Men's suits, shirts, jackets, casual wear, accessories)</td>
+            </tr>
+            <tr>
+                <td>梵思诺 (Versino)</td>
+                <td>宝安区</td>
+                <td>宝安区宝安国际机场T3航站楼4R-03-03</td>
+                <td>中国高端商务男装品牌 (Chinese high-end business menswear brand)</td>
+                <td>男士西装、衬衫、夹克、休闲服饰、配饰 (Men's suits, shirts, jackets, casual wear, accessories)</td>
+            </tr>
+            <tr>
+                <td>优雅•益 (ELEGANT.PROSPER)</td>
+                <td>罗湖区</td>
+                <td>罗湖区京基金融中心裙楼自用商业01层01-126</td>
+                <td>高级时装买手店 (High-fashion multi-brand boutique)</td>
+                <td>国际设计师品牌服饰、鞋履、包袋、配饰 (International designer apparel, shoes, bags, accessories)</td>
+            </tr>
+            <tr>
+                <td>优雅•益 (ELEGANT.PROSPER)</td>
+                <td>南山区</td>
+                <td>南山区华润深圳湾万象城L252号商铺</td>
+                <td>高级时装买手店 (High-fashion multi-brand boutique)</td>
+                <td>国际设计师品牌服饰、鞋履、包袋、配饰 (International designer apparel, shoes, bags, accessories)</td>
+            </tr>
+            <tr>
+                <td>优雅•益 (ELEGANT.PROSPER)</td>
+                <td>福田区</td>
+                <td>福田区福华三路268号星河COCOPARK购物广场LIS001-LISI42L1-059</td>
+                <td>高级时装买手店 (High-fashion multi-brand boutique)</td>
+                <td>国际设计师品牌服饰、鞋履、包袋、配饰 (International designer apparel, shoes, bags, accessories)</td>
+            </tr>
+             <tr>
+                <td>朱炳仁·铜 (Zhu Bingren Copper)</td>
+                <td>宝安区</td>
+                <td>宝安区新安街道N12区壹方中心南区026D</td>
+                <td>铜雕艺术品牌 (Copper art brand)</td>
+                <td>铜制艺术品、家居装饰品、文创产品 (Copper artworks, home decor, cultural and creative products)</td>
+            </tr>
+            <tr>
+                <td>爱马仕 (Hermès)</td>
+                <td>罗湖区</td>
+                <td>罗湖区宝安南路1881号华润君悦酒店A栋S108号商铺</td>
+                <td>法国奢侈品品牌 (French luxury goods brand)</td>
+                <td>皮具、丝巾、成衣、腕表、香水、家居用品 (Leather goods, silk scarves, ready-to-wear, watches, perfumes, home furnishings)</td>
+            </tr>
+            <tr>
+                <td>路易威登 (Louis Vuitton)</td>
+                <td>罗湖区</td>
+                <td>罗湖区宝安南路1881号华润君悦酒店A栋S101、S102、S105号商铺</td>
+                <td>法国奢侈品品牌 (French luxury goods brand)</td>
+                <td>皮具、旅行箱、成衣、鞋履、腕表、珠宝、配饰 (Leather goods, trunks, ready-to-wear, shoes, watches, jewelry, accessories)</td>
+            </tr>
+            <tr>
+                <td>迪奥 (Dior)</td>
+                <td>罗湖区</td>
+                <td>罗湖区宝安南路1881号华润君悦酒店A栋S126、S128号商铺</td>
+                <td>法国奢侈品品牌 (French luxury goods brand)</td>
+                <td>高级定制、成衣、皮具、鞋履、配饰、高级珠宝、腕表、美妆 (Haute couture, ready-to-wear, leather goods, shoes, accessories, fine jewelry, watches, beauty)</td>
+            </tr>
+            <tr>
+                <td>迪奥 (Dior)</td>
+                <td>罗湖区</td>
+                <td>罗湖区宝安南路1881号华润中心万象城447、448号商铺</td>
+                <td>法国奢侈品品牌 (French luxury goods brand)</td>
+                <td>成衣、皮具、鞋履、配饰、美妆 (Ready-to-wear, leather goods, shoes, accessories, beauty)</td>
+            </tr>
+            <tr>
+                <td>卡地亚 (Cartier)</td>
+                <td>罗湖区</td>
+                <td>罗湖区宝安南路1881号华润君悦酒店D栋S133号商铺</td>
+                <td>法国奢侈品品牌 (French luxury goods brand)</td>
+                <td>珠宝、腕表、皮具、配饰 (Jewelry, watches, leather goods, accessories)</td>
+            </tr>
+             <tr>
+                <td>蔻依 (Chloé)</td>
+                <td>罗湖区</td>
+                <td>罗湖区宝安南路1881号L156号商铺</td>
+                <td>法国奢侈时装品牌 (French luxury fashion brand)</td>
+                <td>成衣、手袋、鞋履、配饰 (Ready-to-wear, handbags, shoes, accessories)</td>
+            </tr>
+             <tr>
+                <td>江诗丹顿 (Vacheron Constantin)</td>
+                <td>罗湖区</td>
+                <td>罗湖区宝安南路华润万象城S120号商铺</td>
+                <td>瑞士高级钟表制造商 (Swiss luxury watch manufacturer) - 历峰集团旗下</td>
+                <td>腕表 (Watches)</td>
+            </tr>
+        <!-- Data from 深圳市第四批境外旅客购物离境退税商店名单.doc -->
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>南山区</td> <td>深圳市南山区南山街道南海大道2163号深圳来福士广场B1层04/05号</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>龙岗区</td> <td>深圳市龙岗区龙城街道龙翔大道7188号路万科广场1层12/13号商铺</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>龙岗区</td> <td>深圳市龙岗区布吉街道翔鸽路深圳华润万象汇购物中心第L1层L191号商铺</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>龙华区</td> <td>深圳市龙华区观澜街道广培社区高尔夫大道8号之观澜湖商业中心一楼SL104、负一楼B118店铺</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>龙华区</td> <td>深圳市龙华区民治街道民泰社区星河盛世B1-B6栋一层L1S-013</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>福田区</td> <td>深圳市福田区华强北街道华航社区华富路1018号中航城天虹购物中心3层B区3楼L310号商铺</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>星河苏活公园/星河COCO Park (Galaxy COCO Park)</td> <td>福田区</td> <td>深圳市福田区福田街道民田路东福华三路北星河苏活购物公园负一层</td> <td>购物中心 (Shopping mall)</td> <td>服饰、餐饮、娱乐、超市等 (Fashion, dining, entertainment, supermarket, etc.)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>福田区</td> <td>深圳市福田区香蜜湖街道竹园社区农林路69号深国投广场1层01-50/51/52/53</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华一路3号怡景中心城RL1042-1043店铺</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>壹方城 (Uniwalk)</td> <td>宝安区</td> <td>深圳市宝安区新安街道新湖路99号壹方城（新湖路与兴华一路交汇处）4楼-5楼</td> <td>大型购物中心 (Large shopping mall)</td> <td>国际品牌服饰、餐饮、娱乐、超市、影院等 (International fashion brands, dining, entertainment, supermarket, cinema, etc.)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>宝安区</td> <td>深圳市宝安区新安街道宝城5区宝民路海雅缤纷城商业中心（建安一路99号海雅广场）负1-5层部分之（壹）楼L126-2号商铺</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>迪奥美妆 (Dior Beauty)</td> <td>宝安区</td> <td>深圳市宝安区新安街道海旺社区N12区新湖路99号壹方中心北区1层028</td> <td>法国奢侈品牌美妆护肤线 (French luxury brand beauty and skincare line) - LVMH集团旗下</td> <td>香水、化妆品、护肤品 (Perfumes, cosmetics, skincare)</td> </tr>
+        <!-- Data from 深圳市第六批境外旅客购物离境退税商店名单.docx -->
+            <tr> <td>壹方城 (Uniwalk)</td> <td>龙华区</td> <td>深圳市龙华街道景龙社区龙华大道3639号壹成中心花园三区E栋壹方天地C区</td> <td>大型购物中心 (Large shopping mall)</td> <td>品牌服饰、餐饮、娱乐、超市、影院等 (Fashion brands, dining, entertainment, supermarket, cinema, etc.)</td> </tr>
+            <tr> <td>8号仓奥特莱斯 (Outlet No.8)</td> <td>龙华区</td> <td>深圳市龙华区民康路1号</td> <td>品牌折扣购物中心 (Outlet shopping mall)</td> <td>品牌服饰、鞋包、运动户外等折扣商品 (Discounted branded apparel, shoes & bags, sportswear, etc.)</td> </tr>
+            <tr> <td>大梅沙8号仓 (Dameisha Outlet No.8)</td> <td>盐田区</td> <td>深圳市盐田区大梅沙环梅路1号</td> <td>品牌折扣购物中心 (Outlet shopping mall)</td> <td>品牌服饰、鞋包、运动户外等折扣商品 (Discounted branded apparel, shoes & bags, sportswear, etc.)</td> </tr>
+            <tr> <td>满纷天地杉杉奥莱 (Maxland Outlets)</td> <td>宝安区</td> <td>深圳市宝安区松岗街道沙浦社区艺展三路8号</td> <td>品牌折扣购物中心 (Outlet shopping mall)</td> <td>品牌服饰、鞋包、运动户外等折扣商品 (Discounted branded apparel, shoes & bags, sportswear, etc.)</td> </tr>
+            <tr> <td>周六福珠宝 (ZLF Jewelry)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区文心五路33号海岸城广场207</td> <td>中国珠宝品牌 (Chinese jewelry brand)</td> <td>黄金、铂金、钻石、K金、翡翠玉石首饰 (Gold, platinum, diamond, K-gold, jade jewelry)</td> </tr>
+            <tr> <td>周六福珠宝 (ZLF Jewelry)</td> <td>龙华区</td> <td>深圳市龙华新区民治街道星河世纪商场B1-001星河COCO City 一楼LIS-0700周六福</td> <td>中国珠宝品牌 (Chinese jewelry brand)</td> <td>黄金、铂金、钻石、K金、翡翠玉石首饰 (Gold, platinum, diamond, K-gold, jade jewelry)</td> </tr>
+            <tr> <td>巴黎世家 (Balenciaga)</td> <td>罗湖区</td> <td>深圳市罗湖区宝安南路1881号华润中心一期中区万象城一层166号商铺</td> <td>法国奢侈时装品牌 (French luxury fashion brand) - Kering集团旗下</td> <td>成衣、手袋、鞋履、配饰 (Ready-to-wear, handbags, shoes, accessories)</td> </tr>
+            <tr> <td>巴黎世家 (Balenciaga)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L145号商铺、CB101号商铺</td> <td>法国奢侈时装品牌 (French luxury fashion brand) - Kering集团旗下</td> <td>成衣、手袋、鞋履、配饰 (Ready-to-wear, handbags, shoes, accessories)</td> </tr>
+            <tr> <td>古驰 (Gucci)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道宝安南路1881号华润中心万象城N101、N201及N301号商铺</td> <td>意大利奢侈品牌 (Italian luxury brand) - Kering集团旗下</td> <td>成衣、手袋、鞋履、皮具、珠宝、腕表、配饰 (Ready-to-wear, handbags, shoes, leather goods, jewelry, watches, accessories)</td> </tr>
+            <tr> <td>爱马仕 (Hermès)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L168</td> <td>法国奢侈品品牌 (French luxury goods brand)</td> <td>皮具、丝巾、成衣、腕表、香水、家居用品 (Leather goods, silk scarves, ready-to-wear, watches, perfumes, home furnishings)</td> </tr>
+            <tr> <td>尚美巴黎 (Chaumet)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L129</td> <td>法国奢侈珠宝和腕表品牌 (French luxury jewelry and watch brand) - LVMH集团旗下</td> <td>高级珠宝、婚戒、腕表 (High jewelry, bridal rings, watches)</td> </tr>
+            <tr> <td>芬迪 (Fendi)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼L131、二楼L231商铺</td> <td>意大利奢侈品牌 (Italian luxury brand) - LVMH集团旗下</td> <td>成衣、皮草、手袋、鞋履、配饰 (Ready-to-wear, fur, handbags, shoes, accessories)</td> </tr>
+            <tr> <td>登喜路 (Alfred Dunhill)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期二楼237号店</td> <td>英国奢华男士品牌 (British luxury men's brand) - 历峰集团旗下</td> <td>男士成衣、皮具、书写工具、配饰 (Men's ready-to-wear, leather goods, writing instruments, accessories)</td> </tr>
+            <tr> <td>万国表 (IWC Schaffhausen)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L139号商铺</td> <td>瑞士高级钟表制造商 (Swiss luxury watch manufacturer) - 历峰集团旗下</td> <td>腕表 (Watches)</td> </tr>
+            <tr> <td>罗杰杜彼 (Roger Dubuis)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L140号商铺</td> <td>瑞士高级钟表制造商 (Swiss luxury watch manufacturer) - 历峰集团旗下</td> <td>腕表 (Watches)</td> </tr>
+            <tr> <td>卡地亚 (Cartier)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L181</td> <td>法国奢侈品品牌 (French luxury goods brand) - 历峰集团旗下</td> <td>珠宝、腕表、皮具、配饰 (Jewelry, watches, leather goods, accessories)</td> </tr>
+        <!-- Data from 深圳市第七批境外旅客购物离境退税商店名单.docx -->
+            <tr> <td>顺电 (Sundan)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区益田路5023号平安金融中心南塔S302-S307S310-314、S402-413</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>顺电 (Sundan)</td> <td>龙岗区</td> <td>深圳市龙岗区布吉街道罗岗社区信义荔景御园E区1栋L452</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>顺电 (Sundan)</td> <td>南山区</td> <td>深圳市南山区粤海街道海岸城广场负一层042号商铺</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>顺电 (Sundan)</td> <td>宝安区</td> <td>深圳市宝安区西乡街道麻布社区海城路3号前城滨海花园2栋L272-273</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>顺电 (Sundan)</td> <td>罗湖区</td> <td>深圳市罗湖区笋岗街道笋西社区梅园路75号万象华府第3层L317</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>顺电 (Sundan)</td> <td>福田区</td> <td>深圳市福田区华强北街道华航社区华强北路3007号上步工业区103栋</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>顺电 (Sundan)</td> <td>南山区</td> <td>深圳市南山区南山街道华润万象天地B134号商铺</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>顺电 (Sundan)</td> <td>宝安区</td> <td>深圳市宝安区新安街道创业二路与新湖路交汇西南处壹方城L3层-033-D-E号商铺</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>顺电 (Sundan)</td> <td>龙华区</td> <td>深圳市龙华区观澜街道广培社区高尔夫大道8号1栋L215、L216</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>顺电 (Sundan)</td> <td>龙华区</td> <td>深圳市龙华区龙华街道景龙社区龙华大道3639号环智中心C座壹方天地C区L4-027</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>顺电 (Sundan)</td> <td>前海合作区</td> <td>深圳市前海深港合作区南山街道桂湾四路169号万象前海购物中心L236</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>索尼 (Sony)</td> <td>福田区</td> <td>深圳市福田区华富街道皇岗路5001号深业上城（南区）一期2层S224号商铺</td> <td>消费电子与娱乐产品公司直营店 (Consumer electronics and entertainment company direct store)</td> <td>电视、相机、音频设备、游戏机、手机等 (TVs, cameras, audio equipment, game consoles, smartphones, etc.)</td> </tr>
+            <tr> <td>海瑞温斯顿 (Harry Winston)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L158</td> <td>美国奢侈珠宝与腕表品牌 (American luxury jewelry and watch brand) - Swatch集团旗下</td> <td>高级珠宝、钻石、腕表 (High jewelry, diamonds, watches)</td> </tr>
+            <tr> <td>香奈儿 (Chanel)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L170、L173、L175、L177、L266、L271和L273号商铺</td> <td>法国奢侈品品牌 (French luxury goods brand)</td> <td>高级定制、成衣、手袋、鞋履、配饰、高级珠宝、腕表、美妆、香水 (Haute couture, ready-to-wear, handbags, shoes, accessories, fine jewelry, watches, beauty, perfumes)</td> </tr>
+            <tr> <td>沛纳海 (Panerai)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L138</td> <td>意大利高级腕表品牌 (Italian luxury watch brand) - 历峰集团旗下</td> <td>腕表 (Watches)</td> </tr>
+            <tr> <td>万宝龙 (Montblanc)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L160</td> <td>德国奢侈品牌 (German luxury brand) - 历峰集团旗下</td> <td>书写工具、腕表、皮具、配饰 (Writing instruments, watches, leather goods, accessories)</td> </tr>
+            <tr> <td>江诗丹顿 (Vacheron Constantin)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L240</td> <td>瑞士高级钟表制造商 (Swiss luxury watch manufacturer) - 历峰集团旗下</td> <td>腕表 (Watches)</td> </tr>
+            <tr> <td>路易威登 (Louis Vuitton)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L206、L183、L201、L203、L205、L101、L105、L108单元</td> <td>法国奢侈品品牌 (French luxury goods brand)</td> <td>皮具、旅行箱、成衣、鞋履、腕表、珠宝、配饰 (Leather goods, trunks, ready-to-wear, shoes, watches, jewelry, accessories)</td> </tr>
+            <tr> <td>克里斯提·鲁布托 (Christian Louboutin)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L131</td> <td>法国奢侈鞋履和手袋品牌 (French luxury footwear and handbag brand)</td> <td>高跟鞋、平底鞋、运动鞋、手袋、小皮件、美妆 (High heels, flats, sneakers, handbags, small leather goods, beauty)</td> </tr>
+            <tr> <td>日默瓦 (RIMOWA)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L253</td> <td>德国高级行李箱品牌 (German premium luggage brand) - LVMH集团旗下</td> <td>行李箱、旅行配件 (Luggage, travel accessories)</td> </tr>
+            <tr> <td>麦姝 (MSGM)</td> <td>南山区</td> <td>深圳市南山区粤海街道大冲社区华润万象天地SL336</td> <td>意大利时尚品牌 (Italian fashion brand)</td> <td>男女成衣、鞋履、配饰 (Men's and women's ready-to-wear, shoes, accessories)</td> </tr>
+            <tr> <td>圣罗兰 (Saint Laurent)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼L192、二楼L292号商铺</td> <td>法国奢侈时装品牌 (French luxury fashion brand) - Kering集团旗下</td> <td>成衣、手袋、鞋履、皮具、配饰 (Ready-to-wear, handbags, shoes, leather goods, accessories)</td> </tr>
+            <tr> <td>思琳 (CELINE)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼L180+L280号商铺</td> <td>法国奢侈时装品牌 (French luxury fashion brand) - LVMH集团旗下</td> <td>成衣、皮具、手袋、鞋履、配饰 (Ready-to-wear, leather goods, handbags, shoes, accessories)</td> </tr>
+            <tr> <td>宝格丽 (BVLGARI)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城二期一层S109商铺</td> <td>意大利奢侈品牌 (Italian luxury brand) - LVMH集团旗下</td> <td>珠宝、腕表、皮具、配饰、香水 (Jewelry, watches, leather goods, accessories, perfumes)</td> </tr>
+            <tr> <td>蒂芙尼 (Tiffany & Co.)</td> <td>罗湖区</td> <td>深圳市罗湖区宝安南路1881号华润君悦酒店D栋S141号商铺</td> <td>美国奢侈珠宝品牌 (American luxury jewelry brand) - LVMH集团旗下</td> <td>珠宝、钻石、腕表、配饰、家居精品 (Jewelry, diamonds, watches, accessories, home & accessories)</td> </tr>
+            <tr> <td>日默瓦 (RIMOWA)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期二楼L269商铺</td> <td>德国高级行李箱品牌 (German premium luggage brand) - LVMH集团旗下</td> <td>行李箱、旅行配件 (Luggage, travel accessories)</td> </tr>
+            <tr> <td>诺悠翩雅 (Loro Piana)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼L155、L255</td> <td>意大利奢侈品牌 (Italian luxury brand) - LVMH集团旗下</td> <td>羊绒制品、成衣、鞋履、配饰、家居用品 (Cashmere products, ready-to-wear, shoes, accessories, home furnishings)</td> </tr>
+            <tr> <td>天意 (TANGY Collection)</td> <td>龙华区</td> <td>深圳市龙华区龙华街道景龙社区龙华大道3639号壹城中心花园E区壹方天地C区L2-007</td> <td>中国设计师女装品牌 (Chinese designer womenswear brand) - 梁子时装旗下</td> <td>女装、莨绸服饰 (Womenswear, Gambiered Canton Gauze apparel)</td> </tr>
+        <!-- Data from 深圳市第八批境外旅客购物离境退税商店名单.docx -->
+            <tr> <td>乐高 (LEGO)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路268号星河COCOPARK购物广场L1-055B（L1-020、021及L2-027、029号）</td> <td>丹麦玩具公司品牌 (Danish toy company brand)</td> <td>乐高积木套装、玩具、周边产品 (LEGO brick sets, toys, merchandise)</td> </tr>
+            <tr> <td>茜子 (She's)</td> <td>福田区</td> <td>深圳市福田区金田路与福华路交汇处现代商务大厦1806 (公司地址, 门店未知)</td> <td>时尚配饰品牌 (Fashion accessories brand)</td> <td>发饰、围巾、帽子、首饰等 (Hair accessories, scarves, hats, jewelry, etc.)</td> </tr>
+            <tr> <td>悦诗风吟 (innisfree)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路118号皇庭国商购物广场G-70</td> <td>韩国自然主义化妆品品牌 (Korean naturalism cosmetics brand)</td> <td>护肤品、彩妆 (Skincare, makeup)</td> </tr>
+            <!-- 深圳星耀终端有限公司 (Huawei related?) -->
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>宝安区</td> <td>深圳市宝安区福永街道福围社区宝安机场卫星厅3D0223</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区文心五路33号海岸城广场170-1</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>宝安区</td> <td>深圳市宝安区福永街道福围社区宝安机场卫星厅3D0223</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+             <tr> <td>深圳市万客隆工贸有限公司</td> <td>福田区</td> <td>深圳市福田区香蜜湖街道竹子林紫竹六路8号金民大厦6楼603室 (公司地址, 门店未知)</td> <td>工贸公司 (Industrial and trading company)</td> <td>具体产品未知 (Specific products unknown)</td> </tr>
+             <!-- 恒唯信/大疆 DJI entries -->
+            <tr> <td>大疆 (DJI)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道新围社区书城路1号都市名园深圳万象城三期三层A区T308号商铺</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>光明区</td> <td>深圳市光明区马田街道合水口社区松白路4699号A座122一楼L122号大疆店</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>南山区</td> <td>深圳市南山区粤海街道大冲社区华润万象天地SL520</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>前海合作区</td> <td>深圳市前海深港合作区南山街道桂湾四路169号万象前海购物中心B142</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>南山区</td> <td>深圳市南山区沙河街道华夏街社区深南大道9028号益田假日广场B2-22-23B--H21号商铺</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>宝安区</td> <td>深圳市宝安区新安街道海旺社区N12区新湖路99号壹方中心北区负1层003A</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>宝安区</td> <td>深圳市宝安区新安街道新安湖社区建安一路99号海雅广场1层1S32-1S33号商铺大疆店</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>福田区</td> <td>深圳市福田区沙头街道上沙社区滨河大道9283号中洲滨海商业中心一期2栋负一层40号商铺大疆店</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>龙岗区</td> <td>深圳市龙岗区布吉街道罗岗社区信义荔景御园E区1栋L194</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路268号星河COCOPARK购物广场BIS-001A1-B1-W10大疆店B1S-080号商铺</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>龙华区</td> <td>深圳市龙华区龙华街道景龙社区龙华大道3639号环智中心C座壹方天地C区LG-040</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>福田区</td> <td>深圳市福田区梅林街道梅都社区中康路126号卓越梅林中心广场(南区)卓悦汇D117B1-17号大疆商铺</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <!-- Duplicate DJI Bao'an address -->
+            <tr> <td>大疆 (DJI)</td> <td>罗湖区</td> <td>深圳市罗湖区笋岗街道笋西社区梅园路75号万象华府第3层KL326号商铺大疆店</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <tr> <td>大疆 (DJI)</td> <td>福田区</td> <td>深圳市福田区华富街道莲花一村社区皇岗路5001号深业上城（南区）商业楼108</td> <td>无人机与影像系统品牌 (Drone and imaging systems brand)</td> <td>消费级无人机、专业级无人机、手持云台、相机 (Consumer drones, professional drones, handheld gimbals, cameras)</td> </tr>
+            <!-- End DJI entries -->
+             <tr> <td>老佛爷百货 (Galeries Lafayette)</td> <td>福田区</td> <td>深圳市福田区华富街道莲花一村社区皇岗路5001号</td> <td>法国高端百货公司 (French high-end department store)</td> <td>国际品牌服饰、美妆、配饰、家居等 (International fashion brands, beauty, accessories, home goods, etc.)</td> </tr>
+             <tr> <td>善绒国际贸易有限公司</td> <td>福田区</td> <td>深圳市福田区莲花街道福中社区金田路4018号安联大厦15A02 (公司地址, 门店未知)</td> <td>国际贸易公司 (International trading company)</td> <td>可能为服装、纺织品 (Potentially apparel, textiles)</td> </tr>
+             <tr> <td>衣臻时装有限公司 (IZ)</td> <td>福田区</td> <td>深圳市福田区莲花街道福中社区金田路4018号安联大厦18A01-02 (公司地址, 门店未知)</td> <td>时装公司 (Fashion company)</td> <td>服装、配饰 (Apparel, accessories)</td> </tr>
+             <!-- 深圳世纪华腾信息科技有限公司 (Apple APR?) -->
+            <tr> <td>Apple 授权经销商 (Apple Premium Reseller - Coodoo)</td> <td>罗湖区</td> <td>深圳市罗湖区南湖街道人民南路2028号金光华广场一层027/028商铺</td> <td>苹果产品授权零售商 (Authorized retailer for Apple products)</td> <td>iPhone, iPad, Mac, Apple Watch, 配件 (iPhone, iPad, Mac, Apple Watch, accessories)</td> </tr>
+             <tr> <td>金地大百汇/卓悦中心 (One Avenue)</td> <td>福田区</td> <td>深圳市福田区福田街道岗厦社区福华路与金田路交汇处东北侧大百汇广场06层606 (办公地址, 指代整个商场)</td> <td>大型综合商业区 (Large comprehensive commercial complex)</td> <td>国际品牌、餐饮、零售、文化艺术 (International brands, dining, retail, culture & art)</td> </tr>
+             <tr> <td>粉蓝衣橱 (BBLLUUEE)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路269号星河国际花园1楼星河国际花园裙楼福田星河COCOPARK南区1楼L1-010号</td> <td>中国设计师女装品牌 (Chinese designer womenswear brand)</td> <td>女装、艺术生活方式产品 (Womenswear, art lifestyle products)</td> </tr>
+             <tr> <td>迦达高级时装有限公司 (Giada)</td> <td>福田区</td> <td>深圳市福田区莲花街道福中社区金田路4018号安联大厦15A01 (公司地址, 门店未知)</td> <td>意大利奢侈女装品牌 (Italian luxury womenswear brand)</td> <td>女装成衣、手袋、鞋履、配饰 (Women's ready-to-wear, handbags, shoes, accessories)</td> </tr>
+             <!-- NAERSI entries -->
+            <tr> <td>娜尔思 (NAERSI)</td> <td>宝安区</td> <td>深圳市宝安区福永街道兴围社区领航一路18号T3航站楼4R-02-05</td> <td>中国高端女装品牌 (Chinese high-end womenswear brand)</td> <td>女装、职业装、配饰 (Womenswear, professional attire, accessories)</td> </tr>
+            <tr> <td>娜尔思 (NAERSI)</td> <td>宝安区</td> <td>深圳市宝安区航城街道三围社区宝安机场126区综合楼102（宝安机场航站楼3C-01-02）</td> <td>中国高端女装品牌 (Chinese high-end womenswear brand)</td> <td>女装、职业装、配饰 (Womenswear, professional attire, accessories)</td> </tr>
+            <tr> <td>娜尔思 (NAERSI)</td> <td>宝安区</td> <td>深圳市宝安区福永街道福围社区宝安机场卫星厅3A027</td> <td>中国高端女装品牌 (Chinese high-end womenswear brand)</td> <td>女装、职业装、配饰 (Womenswear, professional attire, accessories)</td> </tr>
+            <!-- OGAWA entries -->
+            <tr> <td>奥佳华 (OGAWA)</td> <td>福田区</td> <td>深圳市福田区香蜜湖街道竹园社区农林路69号印力中心负1层B1-41</td> <td>按摩保健器材品牌 (Massage and health equipment brand)</td> <td>按摩椅、按摩器、健康家电 (Massage chairs, massagers, health appliances)</td> </tr>
+            <tr> <td>奥佳华 (OGAWA)</td> <td>南山区</td> <td>深圳市南山区沙河街道深南大道9028号益田假日购物广场L2-36-37</td> <td>按摩保健器材品牌 (Massage and health equipment brand)</td> <td>按摩椅、按摩器、健康家电 (Massage chairs, massagers, health appliances)</td> </tr>
+            <tr> <td>奥佳华 (OGAWA)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区文心五路33号海岸城广场4层416-1铺</td> <td>按摩保健器材品牌 (Massage and health equipment brand)</td> <td>按摩椅、按摩器、健康家电 (Massage chairs, massagers, health appliances)</td> </tr>
+            <tr> <td>奥佳华 (OGAWA)</td> <td>宝安区</td> <td>深圳市宝安区新安街道海旺社区N12区新湖路99号壹方中心北区4层003（L4-003B）</td> <td>按摩保健器材品牌 (Massage and health equipment brand)</td> <td>按摩椅、按摩器、健康家电 (Massage chairs, massagers, health appliances)</td> </tr>
+            <tr> <td>奥佳华 (OGAWA)</td> <td>前海合作区</td> <td>深圳市前海深港合作区南山街道听海大道5059号前海鸿荣源中心A座B2-016</td> <td>按摩保健器材品牌 (Massage and health equipment brand)</td> <td>按摩椅、按摩器、健康家电 (Massage chairs, massagers, health appliances)</td> </tr>
+            <tr> <td>奥佳华 (OGAWA)</td> <td>罗湖区</td> <td>深圳市罗湖区东湖街道太宁路8号喜荟城购物中心三层308号</td> <td>按摩保健器材品牌 (Massage and health equipment brand)</td> <td>按摩椅、按摩器、健康家电 (Massage chairs, massagers, health appliances)</td> </tr>
+            <tr> <td>奥佳华 (OGAWA)</td> <td>龙华区</td> <td>深圳市龙华区龙华街道景龙社区人民路4022号壹方天地A1区L2-060</td> <td>按摩保健器材品牌 (Massage and health equipment brand)</td> <td>按摩椅、按摩器、健康家电 (Massage chairs, massagers, health appliances)</td> </tr>
+            <!-- KORADIOR entry -->
+            <tr> <td>珂莱蒂尔 (KORADIOR)</td> <td>宝安区</td> <td>深圳市宝安区福永街道兴围社区领航一路18号T3航站楼4L-02-05、5L-01-02B</td> <td>中国高端女装品牌 (Chinese high-end womenswear brand)</td> <td>女装、礼服、配饰 (Womenswear, formal wear, accessories)</td> </tr>
+             <tr> <td>博柏利 (Burberry)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L149</td> <td>英国奢侈品牌 (British luxury brand)</td> <td>成衣、风衣、手袋、围巾、配饰 (Ready-to-wear, trench coats, handbags, scarves, accessories)</td> </tr>
+             <tr> <td>泰格豪雅 (TAG Heuer)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L252</td> <td>瑞士奢华腕表品牌 (Swiss luxury watch brand) - LVMH集团旗下</td> <td>腕表、计时码表 (Watches, chronographs)</td> </tr>
+             <tr> <td>高雅德 (Goyard)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L161</td> <td>法国高级皮具及旅行箱品牌 (French high-end leather goods and trunk brand)</td> <td>手袋、旅行箱、小皮件、配饰 (Handbags, trunks, small leather goods, accessories)</td> </tr>
+             <tr> <td>罗杰维维亚 (Roger Vivier)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L142</td> <td>法国奢侈鞋履品牌 (French luxury footwear brand) - Tod's集团旗下</td> <td>鞋履、手袋、配饰 (Footwear, handbags, accessories)</td> </tr>
+             <tr> <td>戴森 (Dyson)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期负一楼B57</td> <td>科技公司，以家电闻名 (Technology company known for home appliances)</td> <td>吸尘器、吹风机、空气净化器、风扇 (Vacuum cleaners, hair dryers, air purifiers, fans)</td> </tr>
+             <tr> <td>芬迪 (Fendi)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L127、L238、L239、L422号商铺</td> <td>意大利奢侈品牌 (Italian luxury brand) - LVMH集团旗下</td> <td>成衣、皮草、手袋、鞋履、配饰 (Ready-to-wear, fur, handbags, shoes, accessories)</td> </tr>
+             <!-- 高爵商贸 (Puyix) -->
+            <tr> <td>溥仪眼镜 (Puyi Optical)</td> <td>南山区</td> <td>深圳市南山区粤海街道深南大道9668号华润万象天地LG80商铺</td> <td>高级眼镜零售商 (Luxury eyewear retailer)</td> <td>国际品牌眼镜、太阳镜 (International branded eyeglasses, sunglasses)</td> </tr>
+             <tr> <td>爱彼 (Audemars Piguet)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L136</td> <td>瑞士高级钟表制造商 (Swiss luxury watch manufacturer)</td> <td>腕表 (Watches)</td> </tr>
+             <tr> <td>思琳 (CELINE)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L196</td> <td>法国奢侈时装品牌 (French luxury fashion brand) - LVMH集团旗下</td> <td>成衣、皮具、手袋、鞋履、配饰 (Ready-to-wear, leather goods, handbags, shoes, accessories)</td> </tr>
+             <tr> <td>欧米茄 (Omega)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L159</td> <td>瑞士高级钟表制造商 (Swiss luxury watch manufacturer) - Swatch集团旗下</td> <td>腕表 (Watches)</td> </tr>
+             <tr> <td>葆蝶家 (Bottega Veneta)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L186</td> <td>意大利奢侈品牌 (Italian luxury brand) - Kering集团旗下</td> <td>皮具、手袋、成衣、鞋履、配饰 (Leather goods, handbags, ready-to-wear, shoes, accessories)</td> </tr>
+             <tr> <td>迪奥 (Dior)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L112、L116、L118、L402、L403、L208、L209、L210号商铺</td> <td>法国奢侈品品牌 (French luxury goods brand)</td> <td>高级定制、成衣、皮具、鞋履、配饰、高级珠宝、腕表、美妆 (Haute couture, ready-to-wear, leather goods, shoes, accessories, fine jewelry, watches, beauty)</td> </tr>
+            <!-- 深圳景威品牌管理有限公司 (Gentle Monster?) -->
+            <tr> <td>Gentle Monster</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路268号星河COCOPARK购物广场B1S-036A-036B</td> <td>韩国潮流眼镜品牌 (Korean fashion eyewear brand)</td> <td>太阳镜、光学眼镜 (Sunglasses, optical glasses)</td> </tr>
+            <tr> <td>Gentle Monster</td> <td>福田区</td> <td>深圳市福田区华富街道莲花一村社区皇岗路5001号深业上城（南区）商业楼114和116号商铺</td> <td>韩国潮流眼镜品牌 (Korean fashion eyewear brand)</td> <td>太阳镜、光学眼镜 (Sunglasses, optical glasses)</td> </tr>
+            <!-- 天虹 -->
+            <tr> <td>天虹商场/君尚 (Rainbow/Grand Department Store)</td> <td>福田区</td> <td>深圳市福田区华强北街道华航社区中航路7号鼎诚国际大厦中航路7-2号、中航路7-8号</td> <td>大型连锁百货/购物中心 (Large department store/shopping mall chain)</td> <td>服饰、化妆品、鞋包、家居用品、超市等 (Apparel, cosmetics, shoes & bags, home goods, supermarket, etc.)</td> </tr>
+            <tr> <td>天虹商场 (Rainbow)</td> <td>龙华区</td> <td>深圳市龙华区民治街道大岭社区中航天逸花园A区L288及地下一层至地上3层</td> <td>大型连锁百货/购物中心 (Large department store/shopping mall chain)</td> <td>服饰、化妆品、鞋包、家居用品、超市等 (Apparel, cosmetics, shoes & bags, home goods, supermarket, etc.)</td> </tr>
+            <!-- 亨吉利 -->
+            <tr> <td>亨吉利世界名表中心 (Harmony World Watch Center)</td> <td>福田区</td> <td>深圳市福田区福田街道岗厦社区福华路346号岗厦城L1层（卓悦中心L1层L133号铺、卓悦中心1栋L1层L124号铺）</td> <td>高级钟表零售商 (Luxury watch retailer)</td> <td>国际品牌腕表 (International branded watches)</td> </tr>
+            <tr> <td>亨吉利世界名表中心 (Harmony World Watch Center)</td> <td>南山区</td> <td>深圳市南山区沙河街道华夏街社区深南大道9028号益田假日广场L1-57-58号</td> <td>高级钟表零售商 (Luxury watch retailer)</td> <td>国际品牌腕表 (International branded watches)</td> </tr>
+            <tr> <td>亨吉利世界名表中心 (Harmony World Watch Center)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城二期B栋整栋1楼S164号</td> <td>高级钟表零售商 (Luxury watch retailer)</td> <td>国际品牌腕表 (International branded watches)</td> </tr>
+            <tr> <td>亨吉利世界名表中心 (Harmony World Watch Center)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区文心五路33号海岸城广场1层118号、122号</td> <td>高级钟表零售商 (Luxury watch retailer)</td> <td>国际品牌腕表 (International branded watches)</td> </tr>
+            <tr> <td>亨吉利世界名表中心 (Harmony World Watch Center)</td> <td>福田区</td> <td>深圳市福田区华强北街道华航社区振华路163号飞亚达大厦振华路169号</td> <td>高级钟表零售商 (Luxury watch retailer)</td> <td>国际品牌腕表 (International branded watches)</td> </tr>
+            <tr> <td>亨吉利世界名表中心 (Harmony World Watch Center)</td> <td>龙岗区</td> <td>深圳市龙岗区龙城街道吉祥社区龙翔大道7188号万科天誉广场L1-31</td> <td>高级钟表零售商 (Luxury watch retailer)</td> <td>国际品牌腕表 (International branded watches)</td> </tr>
+             <tr> <td>葆蝶家 (Bottega Veneta)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼L170商铺</td> <td>意大利奢侈品牌 (Italian luxury brand) - Kering集团旗下</td> <td>皮具、手袋、成衣、鞋履、配饰 (Leather goods, handbags, ready-to-wear, shoes, accessories)</td> </tr>
+             <tr> <td>博柏利 (Burberry)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道华润中心万象城437号商铺</td> <td>英国奢侈品牌 (British luxury brand)</td> <td>成衣、风衣、手袋、围巾、配饰 (Ready-to-wear, trench coats, handbags, scarves, accessories)</td> </tr>
+             <tr> <td>博柏利 (Burberry)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼199号铺、二楼299号铺</td> <td>英国奢侈品牌 (British luxury brand)</td> <td>成衣、风衣、手袋、围巾、配饰 (Ready-to-wear, trench coats, handbags, scarves, accessories)</td> </tr>
+             <!-- 高爵商贸 (Puyix) -->
+            <tr> <td>溥仪眼镜 (Puyi Optical)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城二期D栋2楼S238号商铺</td> <td>高级眼镜零售商 (Luxury eyewear retailer)</td> <td>国际品牌眼镜、太阳镜 (International branded eyeglasses, sunglasses)</td> </tr>
+            <tr> <td>溥仪眼镜 (Puyi Optical) - Glasstique</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期二楼K296号商铺</td> <td>高级眼镜零售商 (Luxury eyewear retailer)</td> <td>国际品牌眼镜、太阳镜 (International branded eyeglasses, sunglasses)</td> </tr>
+            <tr> <td>溥仪眼镜 (Puyi Optical) - Gucci Eyewear</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼101、二楼201商铺</td> <td>高级眼镜零售商 (Luxury eyewear retailer) - Gucci品牌眼镜</td> <td>Gucci品牌眼镜、太阳镜 (Gucci branded eyeglasses, sunglasses)</td> </tr>
+             <tr> <td>周仰杰 (Jimmy Choo)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼L170商铺</td> <td>英国奢侈鞋履及配饰品牌 (British luxury footwear and accessories brand) - Capri Holdings旗下</td> <td>鞋履、手袋、配饰、香水 (Footwear, handbags, accessories, perfumes)</td> </tr>
+             <tr> <td>杰尼亚 (Zegna)</td> <td>罗湖区</td> <td>深圳市罗湖区宝安南路1881号华润君悦酒店C栋S160号商铺</td> <td>意大利奢华男装品牌 (Italian luxury menswear brand)</td> <td>男士西装、成衣、鞋履、皮具、配饰 (Men's suits, ready-to-wear, shoes, leather goods, accessories)</td> </tr>
+             <tr> <td>麒麟珠宝 (Qeelin)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城二期D栋1楼S150号商铺</td> <td>高级珠宝品牌 (Fine jewelry brand) - Kering集团旗下</td> <td>珠宝首饰 (Jewelry)</td> </tr>
+             <tr> <td>露露乐蒙 (lululemon)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道老围社区深南东路5016号蔡屋围京基一百大厦裙楼一楼101B、101C号商铺</td> <td>运动生活方式品牌 (Athletic apparel and lifestyle brand)</td> <td>瑜伽服、运动服、休闲服、配饰 (Yoga wear, athletic apparel, casual wear, accessories)</td> </tr>
+             <tr> <td>人头马君度 (Rémy Cointreau)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城二期A栋1楼KS113</td> <td>烈酒与利口酒集团专卖店 (Spirits and liqueurs group boutique)</td> <td>干邑、利口酒、威士忌等 (Cognac, liqueurs, whisky, etc.)</td> </tr>
+             <tr> <td>斯图尔特·韦茨曼 (Stuart Weitzman)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期二楼208号铺</td> <td>美国奢侈鞋履品牌 (American luxury footwear brand) - Capri Holdings旗下</td> <td>女鞋、靴子、手袋 (Women's shoes, boots, handbags)</td> </tr>
+             <tr> <td>萧邦 (Chopard)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城二期A栋1楼KS113</td> <td>瑞士高级珠宝与腕表品牌 (Swiss luxury jewelry and watch brand)</td> <td>珠宝、腕表 (Jewelry, watches)</td> </tr>
+             <tr> <td>壹方百货/壹方城 (Uniwalk)</td> <td>宝安区</td> <td>深圳市宝安区新安街道新湖路99号壹方城</td> <td>大型购物中心 (Large shopping mall)</td> <td>国际品牌服饰、餐饮、娱乐、超市、影院等 (International fashion brands, dining, entertainment, supermarket, cinema, etc.)</td> </tr>
+             <!-- 深圳市小兴智慧通讯服务有限公司 (Xiaomi related?) -->
+            <tr> <td>小米授权体验店 (Xiaomi Authorized Store)</td> <td>龙华区</td> <td>深圳市龙华区龙华街道景新社区梅龙大道999号壹成中心二区C栋一单元壹方天地D区L2-009</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米授权体验店 (Xiaomi Authorized Store)</td> <td>宝安区</td> <td>深圳市宝安区新桥街道沙企社区蚝乡路佳华领创广场B1017</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米授权体验店 (Xiaomi Authorized Store)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道老围社区深南东路5016号蔡屋围京基一百大厦A座裙楼四楼401d号商铺</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米授权体验店 (Xiaomi Authorized Store)</td> <td>龙华区</td> <td>深圳市龙华区观澜街道广培社区高尔夫大道8号2a栋C座SL107-3</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米授权体验店 (Xiaomi Authorized Store)</td> <td>宝安区</td> <td>深圳市宝安区新安街道海旺社区N12区新湖路99号壹方中心北区负2层061-062</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米授权体验店 (Xiaomi Authorized Store)</td> <td>龙华区</td> <td>深圳市龙华区龙华街道景新社区人民路4022号壹方天地A区B1-002</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米授权体验店 (Xiaomi Authorized Store)</td> <td>龙华区</td> <td>深圳市龙华区民治街道红山社区红山六九七九三期11栋119</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米授权体验店 (Xiaomi Authorized Store)</td> <td>宝安区</td> <td>深圳市宝安区新安街道安乐社区44区翻身路117号富源商贸中心创业一路1018深圳创业天虹L1层1026a铺</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米授权体验店 (Xiaomi Authorized Store)</td> <td>罗湖区</td> <td>深圳市罗湖区笋岗街道笋西社区梅园路75号万象华府第3层L322</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米授权体验店 (Xiaomi Authorized Store)</td> <td>龙岗区</td> <td>深圳市龙岗区龙城街道爱联社区爱南路666号星河时代购物公园101</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+             <tr> <td>深圳市永利合电子科技有限公司</td> <td>光明区</td> <td>深圳市光明区公明街道西田社区综合市场第一栋155</td> <td>电子科技公司 (Electronics technology company)</td> <td>电子产品、通讯设备 (Electronic products, communication equipment)</td> </tr>
+             <tr> <td>乐百信商店 (Lebest)</td> <td>宝安区</td> <td>深圳市宝安区宝安国际机场T3航站楼4D-02-01</td> <td>机场零售店 (Airport retail store)</td> <td>旅行用品、纪念品、食品饮料、电子配件 (Travel goods, souvenirs, food & beverage, electronic accessories)</td> </tr>
+             <tr> <td>绿情蓓 (Dr. Althea) / 蔻丝芙国际贸易</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路268号星河COCOPARK购物广场L2S001-L2S-N13-60</td> <td>韩国护肤品牌 (Korean skincare brand)</td> <td>护肤品 (Skincare products)</td> </tr>
+             <tr> <td>圣罗兰 (Saint Laurent)</td> <td>宝安区</td> <td>深圳市宝安区福永街道福围社区宝安机场卫星厅3D001</td> <td>法国奢侈时装品牌 (French luxury fashion brand) - Kering集团旗下</td> <td>成衣、手袋、鞋履、皮具、配饰 (Ready-to-wear, handbags, shoes, leather goods, accessories)</td> </tr>
+             <tr> <td>普拉达 (Prada)</td> <td>宝安区</td> <td>深圳市宝安区福永街道兴围社区T3航站楼3S-11-03</td> <td>意大利奢侈品牌 (Italian luxury brand)</td> <td>成衣、手袋、鞋履、皮具、配饰 (Ready-to-wear, handbags, shoes, leather goods, accessories)</td> </tr>
+             <tr> <td>零重力实验室 (ZERO G LAB) / 北京翼蓝科技</td> <td>宝安区</td> <td>深圳市宝安区福永街道福围社区宝安机场卫星厅3D017</td> <td>科技产品/无人机零售? (Tech products/Drone retail?)</td> <td>无人机、科技产品 (Drones, tech products)</td> </tr>
+             <tr> <td>麦姝 (MSGM)</td> <td>前海合作区</td> <td>深圳市前海深港合作区南山街道桂湾四路169号万象前海购物中心L249，L250</td> <td>意大利时尚品牌 (Italian fashion brand)</td> <td>男女成衣、鞋履、配饰 (Men's and women's ready-to-wear, shoes, accessories)</td> </tr>
+             <tr> <td>浪琴 (Longines)</td> <td>前海合作区</td> <td>深圳市前海深港合作区南山街道桂湾四路169号万象前海购物中心B127</td> <td>瑞士高级钟表制造商 (Swiss luxury watch manufacturer) - Swatch集团旗下</td> <td>腕表 (Watches)</td> </tr>
+            <!-- Fuanna entries -->
+            <tr> <td>富安娜 (Fuanna)</td> <td>罗湖区</td> <td>深圳市罗湖区莲塘罗沙北路鹏兴花园56栋111号商铺</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>罗湖区</td> <td>深圳市罗湖区凤凰路凤山大厦一楼中座5号铺位</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>宝安区</td> <td>深圳市宝安区新安街道新安湖社区8区24栋新乐村前进一路133号</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>南山区</td> <td>深圳市南山区南山大道中海丽苑1、2栋裙楼1#A</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>福田区</td> <td>深圳市福田区梅林街道梅河社区梅林路139号宏安花园A栋139-11号</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>罗湖区</td> <td>深圳市罗湖区翠竹路翠兰楼地下商场02东南面</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>南山区</td> <td>深圳市南山区南头街道田厦社区桃园路119号常丰花园B栋105106</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>福田区</td> <td>深圳市福田区振华路与燕南路交汇处华美3号合成厂房304栋104</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>南山区</td> <td>深圳市南山区湖滨花园裙楼A栋105号</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>福田区</td> <td>深圳市福田区景田路锦文阁103</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>福田区</td> <td>深圳市福田区莲花西路缔梦园雅梦轩105号、106号铺位</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙岗区</td> <td>深圳市龙岗区南湾街道宝岭社区桂芳园24#楼布吉东大街128号</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>宝安区</td> <td>深圳市宝安区西乡街道流塘社区新安四路284号一楼102</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙华区</td> <td>深圳市龙华新区龙华街道大浪南路新城市花园首层</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙华区</td> <td>深圳市龙华新区民治街道布龙公路与人民南路交汇处南侧日出印象花园综合楼首、二层</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>宝安区</td> <td>深圳市宝安区西乡街道宝源路华海雅苑商住小区第105、106、107号</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙华区</td> <td>深圳市龙华区龙华街道清湖社区清湖村富安娜公司B栋101</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>盐田区</td> <td>深圳市盐田区海山街道鹏湾社区海景二路1038号壹海公寓一区02栋0104</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙华区</td> <td>深圳市龙华区大浪街道同胜社区同富裕工业园第9栋115、116</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>宝安区</td> <td>深圳市宝安区新安街道大浪社区27区华联城市全景E、F、G栋135</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙华区</td> <td>深圳市龙华区龙华街道三联社区东环二路美丽家园北区1栋104、105及113、114</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>宝安区</td> <td>深圳市宝安区新安街道新安湖社区建安一路99号海雅广场4层L402-2</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙华区</td> <td>深圳市龙华区龙华街道景龙社区人民路与八一路交汇处壹成环智中心1座壹方天地B区B1-001</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>南山区</td> <td>深圳市南山区粤海街道龙城社区南海大道2536号现代城梦想家园103</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路269号星河国际花园2层</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙岗区</td> <td>深圳市龙岗区龙城街道愉园社区龙福西路90号罗马公元5栋龙福西路88号欧景花园（二期）5、6号楼商铺102、103</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙岗区</td> <td>深圳市龙岗区坂田街道大发埔社区吉华路635号佳华领汇广场二期201</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>宝安区</td> <td>深圳市宝安区西乡街道劳动社区槟城西岸2座悦和路7-15、7-16</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙华区</td> <td>深圳市龙华区民治街道红山社区民塘路与民兴街交汇处西北侧安居尚龙苑1栋裙楼01层21</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙华区</td> <td>深圳市龙华区龙华街道景龙社区龙华建设路88-21号102、103、108</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+            <tr> <td>富安娜 (Fuanna)</td> <td>龙华区</td> <td>深圳市龙华区民治街道民泰社区星河盛世B1-B6栋</td> <td>家纺品牌 (Home textile brand)</td> <td>床上用品、毛巾、家居服饰 (Bedding, towels, home wear)</td> </tr>
+        <!-- Data from 深圳市第九批境外旅客购物离境退税商店名单.docx -->
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>福田区</td> <td>深圳市福田区梅林街道梅都社区中康路126号卓越梅林中心广场(南区)卓悦汇101</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>福田区</td> <td>深圳市福田区福田街道岗厦社区福华路348号卓悦中心1栋B159-B160号商铺</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路268号星河COCOPARK商场北区负一楼B1S-083小米之家</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>宝安区</td> <td>深圳市宝安区西乡街道永丰社区合正汇一城A-J魅力时代花园购物中心L1014</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>小米之家 (Xiaomi Store)</td> <td>宝安区</td> <td>深圳市宝安区宝石东路209号星城购物中心F1-L115B</td> <td>消费电子产品与智能设备零售店 (Consumer electronics and smart device retail store)</td> <td>手机、电视、笔记本电脑、智能家居设备、生活周边产品 (Smartphones, TVs, laptops, smart home devices, lifestyle products)</td> </tr>
+            <tr> <td>顺电 (Sundan)</td> <td>福田区</td> <td>深圳市福田区华富街道莲花一村社区皇岗路5001号深业上城（南区）商业综合楼234</td> <td>高端家电及消费电子产品连锁店 (High-end appliance and consumer electronics chain)</td> <td>家电、数码产品、影音设备、生活电器 (Home appliances, digital products, audio-visual equipment, lifestyle appliances)</td> </tr>
+            <tr> <td>圣珀齐 (SPORTMAX)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期三楼395店铺</td> <td>意大利时尚品牌 (Italian fashion brand) - Max Mara集团旗下</td> <td>女装成衣、配饰 (Women's ready-to-wear, accessories)</td> </tr>
+            <tr> <td>圣珀齐 (SPORTMAX)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路268号星河COCOPARK购物广场L1S-062-069(L1-065)</td> <td>意大利时尚品牌 (Italian fashion brand) - Max Mara集团旗下</td> <td>女装成衣、配饰 (Women's ready-to-wear, accessories)</td> </tr>
+            <tr> <td>圣珀齐 (SPORTMAX)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L323</td> <td>意大利时尚品牌 (Italian fashion brand) - Max Mara集团旗下</td> <td>女装成衣、配饰 (Women's ready-to-wear, accessories)</td> </tr>
+            <tr> <td>周生生 (Chow Sang Sang)</td> <td>罗湖区</td> <td>中国广东省深圳市罗湖区宝安南路1881号万象城负一楼B49商铺</td> <td>香港珠宝品牌 (Hong Kong jewelry brand)</td> <td>黄金、铂金、钻石、K金、珠宝首饰 (Gold, platinum, diamond, K-gold, jewelry)</td> </tr>
+            <tr> <td>歌力思 (ELLASSAY)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期三楼307</td> <td>中国高端女装品牌 (Chinese high-end womenswear brand)</td> <td>女装、配饰 (Womenswear, accessories)</td> </tr>
+            <tr> <td>歌力思 (ELLASSAY)</td> <td>南山区</td> <td>深圳市南山区粤海街道华润万象天地SL262号</td> <td>中国高端女装品牌 (Chinese high-end womenswear brand)</td> <td>女装、配饰 (Womenswear, accessories)</td> </tr>
+            <!-- 深圳世纪华腾信息科技有限公司 (Apple APR - Coodoo) -->
+            <tr> <td>Apple 授权经销商 (Apple Premium Reseller - Coodoo)</td> <td>福田区</td> <td>深圳市福田区华强北街道华航社区华强北路1019号华强广场B座1层H1F001号商铺</td> <td>苹果产品授权零售商 (Authorized retailer for Apple products)</td> <td>iPhone, iPad, Mac, Apple Watch, 配件 (iPhone, iPad, Mac, Apple Watch, accessories)</td> </tr>
+            <tr> <td>Apple 授权经销商 (Apple Premium Reseller - Coodoo)</td> <td>宝安区</td> <td>深圳市宝安区新安街道海滨社区欢乐港湾2号东L1-068东L2-033号商铺</td> <td>苹果产品授权零售商 (Authorized retailer for Apple products)</td> <td>iPhone, iPad, Mac, Apple Watch, 配件 (iPhone, iPad, Mac, Apple Watch, accessories)</td> </tr>
+            <tr> <td>Apple 授权经销商 (Apple Premium Reseller - Coodoo)</td> <td>南山区</td> <td>深圳市南山区蛇口街道深圳湾社区中心路2233号宝能太古城北区一单元NB147/NB154/NB155/NB156-2</td> <td>苹果产品授权零售商 (Authorized retailer for Apple products)</td> <td>iPhone, iPad, Mac, Apple Watch, 配件 (iPhone, iPad, Mac, Apple Watch, accessories)</td> </tr>
+            <tr> <td>Apple 授权经销商 (Apple Premium Reseller - Coodoo)</td> <td>南山区</td> <td>深圳市南山区沙河街道深南大道益田假日广场B2-10号商铺</td> <td>苹果产品授权零售商 (Authorized retailer for Apple products)</td> <td>iPhone, iPad, Mac, Apple Watch, 配件 (iPhone, iPad, Mac, Apple Watch, accessories)</td> </tr>
+            <tr> <td>Apple 授权经销商 (Apple Premium Reseller - Coodoo)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路118号皇庭国商购物广场G-10</td> <td>苹果产品授权零售商 (Authorized retailer for Apple products)</td> <td>iPhone, iPad, Mac, Apple Watch, 配件 (iPhone, iPad, Mac, Apple Watch, accessories)</td> </tr>
+            <tr> <td>Apple 授权经销商 (Apple Premium Reseller - Coodoo)</td> <td>南山区</td> <td>深圳市南山区沙河街道白石洲东社区白石三道深湾汇云中心四期G座L101-L102</td> <td>苹果产品授权零售商 (Authorized retailer for Apple products)</td> <td>iPhone, iPad, Mac, Apple Watch, 配件 (iPhone, iPad, Mac, Apple Watch, accessories)</td> </tr>
+            <tr> <td>Apple 授权经销商 (Apple Premium Reseller - Coodoo)</td> <td>坪山区</td> <td>深圳市坪山区坪山街道六联社区深汕路（坪山段）168号六和商业广场一期L1-10-11</td> <td>苹果产品授权零售商 (Authorized retailer for Apple products)</td> <td>iPhone, iPad, Mac, Apple Watch, 配件 (iPhone, iPad, Mac, Apple Watch, accessories)</td> </tr>
+            <tr> <td>Apple 授权经销商 (Apple Premium Reseller - Coodoo)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期三楼N301、N302号商铺</td> <td>苹果产品授权零售商 (Authorized retailer for Apple products)</td> <td>iPhone, iPad, Mac, Apple Watch, 配件 (iPhone, iPad, Mac, Apple Watch, accessories)</td> </tr>
+            <!-- 深圳畅航计算机科技有限公司 (Huawei?) -->
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>宝安区</td> <td>深圳市宝安区新安街道新安湖社区建安一路99号海雅广场负1层B123号商铺</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>宝安区</td> <td>深圳市宝安区西乡街道麻布社区海城路3号前城滨海花园2栋L165</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>坪山区</td> <td>深圳市坪山区坪山街道六联社区深汕路（坪山段）168号六和商业广场一期L1-22-23</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>龙岗区</td> <td>深圳市龙岗区龙城街道回龙埔社区梦创广场梦中心L1-49</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>龙岗区</td> <td>深圳市龙岗区坂田街道杨美社区东坡路3号万致天地商业中心1栋L2-28</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>罗湖区</td> <td>深圳市罗湖区东晓街道东晓社区太白路3008号深圳天河城118</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>光明区</td> <td>深圳市光明区凤凰街道塘家社区凤凰英荟城4栋201</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>龙岗区</td> <td>深圳市龙岗区龙城街道尚景社区龙岗大道万科里B1-46</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+            <tr> <td>华为授权体验店 (Huawei Authorized Store)</td> <td>龙岗区</td> <td>深圳市龙岗区布吉街道罗岗社区信义荔景御园E区1栋L126</td> <td>消费电子品牌授权店 (Consumer electronics brand authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+             <tr> <td>蔻莎 (COSCIA)</td> <td>福田区</td> <td>深圳市福田区福田街道岗厦社区福华路348号卓悦中心1栋LA007(L122号)商铺</td> <td>意大利奢侈品百货/买手店 (Italian luxury department/multi-brand store)</td> <td>国际奢侈品牌服饰、鞋履、包袋、配饰 (International luxury fashion brands, shoes, bags, accessories)</td> </tr>
+             <tr> <td>罗意威 (LOEWE)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼L150&二楼L250商铺</td> <td>西班牙奢侈品牌 (Spanish luxury brand) - LVMH集团旗下</td> <td>皮具、手袋、成衣、鞋履、配饰 (Leather goods, handbags, ready-to-wear, shoes, accessories)</td> </tr>
+             <tr> <td>纪梵希 (Givenchy)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼L128、二楼L228号商铺</td> <td>法国奢侈时装品牌 (French luxury fashion brand) - LVMH集团旗下</td> <td>成衣、手袋、鞋履、配饰、美妆 (Ready-to-wear, handbags, shoes, accessories, beauty)</td> </tr>
+             <tr> <td>蔻驰 (Coach)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期负一楼B78号商铺</td> <td>美国轻奢品牌 (American accessible luxury brand) - Tapestry集团旗下</td> <td>手袋、皮具、鞋履、成衣、配饰 (Handbags, leather goods, shoes, ready-to-wear, accessories)</td> </tr>
+             <tr> <td>普拉达 (Prada)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼L176、L276号铺</td> <td>意大利奢侈品牌 (Italian luxury brand)</td> <td>成衣、手袋、鞋履、皮具、配饰 (Ready-to-wear, handbags, shoes, leather goods, accessories)</td> </tr>
+             <tr> <td>乔治·阿玛尼 (Giorgio Armani)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区深南东路5001号万象城一期一楼S157/S257号商铺</td> <td>意大利奢侈品牌 (Italian luxury brand)</td> <td>高级成衣、定制西装、鞋履、配饰、美妆 (Luxury ready-to-wear, tailored suits, shoes, accessories, beauty)</td> </tr>
+             <tr> <td>杜嘉班纳 (Dolce & Gabbana)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道宝安南路1881号华润中心万象城438/439号商铺</td> <td>意大利奢侈品牌 (Italian luxury brand)</td> <td>成衣、手袋、鞋履、配饰、珠宝、腕表、美妆 (Ready-to-wear, handbags, shoes, accessories, jewelry, watches, beauty)</td> </tr>
+             <tr> <td>杜嘉班纳 (Dolce & Gabbana)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼187号、2层287号商铺</td> <td>意大利奢侈品牌 (Italian luxury brand)</td> <td>成衣、手袋、鞋履、配饰、珠宝、腕表、美妆 (Ready-to-wear, handbags, shoes, accessories, jewelry, watches, beauty)</td> </tr>
+             <tr> <td>范思哲 (Versace)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期二楼270/272号商铺</td> <td>意大利奢侈品牌 (Italian luxury brand) - Capri Holdings旗下</td> <td>成衣、手袋、鞋履、配饰、家居用品 (Ready-to-wear, handbags, shoes, accessories, home collection)</td> </tr>
+             <tr> <td>摩奈 (Moynat)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼L135号商铺</td> <td>法国高级皮具及旅行箱品牌 (French high-end leather goods and trunk brand) - LVMH集团旗下</td> <td>手袋、旅行箱、小皮件 (Handbags, trunks, small leather goods)</td> </tr>
+             <tr> <td>托德斯 (Tod's)</td> <td>罗湖区</td> <td>深圳市罗湖区桂园街道人民桥社区宝安南路1881号万象城一期一楼101、二楼201商铺</td> <td>意大利奢侈鞋履和皮具品牌 (Italian luxury footwear and leather goods brand)</td> <td>鞋履、手袋、皮具、成衣、配饰 (Footwear, handbags, leather goods, ready-to-wear, accessories)</td> </tr>
+             <tr> <td>深业泰富广场 (ICC Plaza)</td> <td>罗湖区</td> <td>深圳市罗湖区笋岗街道田心社区梨园路与梅园路交汇处东北侧深业泰富广场1层至4层（城市会客厅）</td> <td>商业综合体 (Commercial complex)</td> <td>家居、建材、设计、餐饮等 (Home furnishing, building materials, design, dining, etc.)</td> </tr>
+             <tr> <td>巴黎世家 (Balenciaga)</td> <td>宝安区</td> <td>深圳市宝安区福永街道福围社区宝安机场卫星厅3D029</td> <td>法国奢侈时装品牌 (French luxury fashion brand) - Kering集团旗下</td> <td>成衣、手袋、鞋履、配饰 (Ready-to-wear, handbags, shoes, accessories)</td> </tr>
+             <tr> <td>深圳市佳业荣科技有限公司</td> <td>宝安区</td> <td>深圳市宝安区松岗街道红星社区星际家园1-3栋B1803 (公司地址, 门店未知)</td> <td>科技公司 (Technology company)</td> <td>电子产品、通讯设备 (Electronic products, communication equipment)</td> </tr>
+             <tr> <td>海雅缤纷城 (Haiya Mega Mall)</td> <td>宝安区</td> <td>深圳市宝安区宝城五区宝民路海雅缤纷城商业中心（建安一路99号海雅广场）负1-5层部分（办公场所, 指代整个商场）</td> <td>大型购物中心 (Large shopping mall)</td> <td>国际国内品牌服饰、餐饮、娱乐、超市、影院等 (International & domestic fashion brands, dining, entertainment, supermarket, cinema, etc.)</td> </tr>
+             <tr> <td>乐服 (LoveFix) / 华为授权服务中心</td> <td>福田区</td> <td>深圳市福田区福田街道福华三路福田星河cocopark负一层B1S-123号商铺</td> <td>手机维修服务商/华为授权服务 (Mobile repair service provider / Huawei authorized service)</td> <td>手机维修、配件销售 (Phone repair, accessory sales)</td> </tr>
+             <tr> <td>全棉时代 (Purcotton)</td> <td>福田区</td> <td>深圳市福田区福田街道福华三路地铁购物公园C出口星河COCO Park2层L2S-069-075号</td> <td>全棉生活用品品牌 (Cotton-based lifestyle goods brand)</td> <td>母婴用品、家居用品、个人护理、服装 (Baby products, home goods, personal care, apparel)</td> </tr>
+             <tr> <td>宝格丽 (BVLGARI)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L120</td> <td>意大利奢侈品牌 (Italian luxury brand) - LVMH集团旗下</td> <td>珠宝、腕表、皮具、配饰、香水 (Jewelry, watches, leather goods, accessories, perfumes)</td> </tr>
+             <tr> <td>伯尔鲁帝 (Berluti)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L1</td> <td>法国奢华男士品牌 (French luxury men's brand) - LVMH集团旗下</td> <td>男鞋、皮具、成衣、配饰 (Men's shoes, leather goods, ready-to-wear, accessories)</td> </tr>
+             <tr> <td>亚历山大王 (Alexander Wang)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区科苑南路2888号深圳湾万象城L228</td> <td>美国时尚品牌 (American fashion brand)</td> <td>男女成衣、手袋、鞋履、配饰 (Men's and women's ready-to-wear, handbags, shoes, accessories)</td> </tr>
+             <tr> <td>耀德通信 / 华为授权体验店</td> <td>南山区</td> <td>深圳市南山区西丽街道留仙社区西丽同发路与留仙大道东北侧，原越华石场内天悦湾花园1栋半地下120</td> <td>通信公司/华为授权店 (Communication company / Huawei authorized store)</td> <td>手机、平板、笔记本、穿戴设备、智能家居 (Smartphones, tablets, laptops, wearables, smart home devices)</td> </tr>
+            <!-- 深圳市美域科技有限公司 (Multiple Brands APR/Retailer) -->
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路268号星河河COCOPARK购物广场BIS-001A1-B1-W10B1S131</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>宝安区</td> <td>深圳市宝安区新安街道文汇社区13区福城前海新纪元嘉洲商务中心2栋A栋1006 (办公地址?)</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>南山区</td> <td>深圳市南山区南头街道田厦社区常兴路86号常兴广场101A</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>罗湖区</td> <td>深圳市罗湖区东门街道东门社区深圳市罗湖区东门街道东门社区深南东路3002号电信大厦一层整层-1</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>南山区</td> <td>深圳市南山区粤海街道海珠社区文心五路33号海岸大厦西座201 (办公地址?)</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>南山区</td> <td>深圳市南山区招商街道水湾社区海上世界船前广场1栋201</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>龙岗区</td> <td>深圳市龙岗区横岗街道华侨新村社区茂盛路1号志健时代广场1A-055</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>龙华区</td> <td>深圳市龙华区大浪街道同胜社区同富裕工业园第6栋第1层6113</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华一路3号领展购物广场RL1003</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>宝安区</td> <td>深圳市宝安区新安街道海旺社区N12区新湖路99号壹方中心北区4层026</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>龙华区</td> <td>深圳市龙华区民治街道民泰社区星河盛世B1-B6栋一层L1S-003A</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>罗湖区</td> <td>深圳市罗湖区黄贝街道凤凰社区凤凰路143号</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>龙岗区</td> <td>深圳市龙岗区龙城街道回龙埔社区梦创广场梦中心LG层</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>龙岗区</td> <td>深圳市龙岗区横岗街道华侨新村社区荣德时代广场1132</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>龙岗区</td> <td>深圳市龙岗区坂田街道南坑社区雅宝路号星河WORLD2层L2S-056-057-058号商铺</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>龙岗区</td> <td>深圳市龙岗区吉华街道翠湖社区景华春天家园商铺半地下108L1-09S号</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>龙岗区</td> <td>深圳市龙岗区龙城街道吉祥社区龙翔大道7188号万科天誉广场L4-30</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <tr> <td>Apple/华为等授权店 (APR/Huawei Store - Meiyu Tech)</td> <td>龙岗区</td> <td>深圳市龙岗区龙城街道尚景社区龙岗大道万科里L1-03</td> <td>多品牌电子产品授权零售商 (Multi-brand electronics authorized retailer)</td> <td>手机、电脑、平板、配件 (Smartphones, computers, tablets, accessories)</td> </tr>
+            <!-- CBS -->
+            <tr> <td>CBD家居 (CBD Home)</td> <td>罗湖区</td> <td>深圳市罗湖区笋岗街道田心社区宝安北路3008号宝能中心A栋3层3A16/3A18/3A03</td> <td>家居品牌 (Home furnishing brand)</td> <td>沙发、床垫、软床、家居配套 (Sofas, mattresses, beds, home accessories)</td> </tr>
+            <tr> <td>CBD家居 (CBD Home)</td> <td>宝安区</td> <td>深圳市宝安区福永街道怀德社区翠岗东路南侧富邦家具101</td> <td>家居品牌 (Home furnishing brand)</td> <td>沙发、床垫、软床、家居配套 (Sofas, mattresses, beds, home accessories)</td> </tr>
+            <tr> <td>CBD家居 (CBD Home)</td> <td>南山区</td> <td>深圳市南山区桃源街道龙辉社区沙河东路141号欧洲城香江家居1层A010015/A010017A/A018007A</td> <td>家居品牌 (Home furnishing brand)</td> <td>沙发、床垫、软床、家居配套 (Sofas, mattresses, beds, home accessories)</td> </tr>
+             <tr> <td>天意 (TANGY Collection)</td> <td>福田区</td> <td>深圳市福田区福田街道福安社区福华三路269号星河国际花园裙楼，福田星河coco park南区一楼L1-062号商铺</td> <td>中国设计师女装品牌 (Chinese designer womenswear brand) - 梁子时装旗下</td> <td>女装、莨绸服饰 (Womenswear, Gambiered Canton Gauze apparel)</td> </tr>
+
+        </tbody>
+    </table>
+
+    <script>
+        const table = document.getElementById('store-table');
+        const tbody = table.getElementsByTagName('tbody')[0];
+        const rows = Array.from(tbody.getElementsByTagName('tr'));
+        const districtFilter = document.getElementById('district-filter');
+        const brandFilter = document.getElementById('brand-filter');
+
+        // --- Populate Filters ---
+        const districts = new Set();
+        const brands = new Set();
+
+        rows.forEach(row => {
+            const cells = row.getElementsByTagName('td');
+            if (cells.length >= 3) {
+                const brand = cells[0].textContent.trim();
+                const district = cells[1].textContent.trim();
+                if (brand) brands.add(brand);
+                if (district) districts.add(district);
+            }
+        });
+
+        // Sort and add options
+        [...districts].sort().forEach(district => {
+            const option = document.createElement('option');
+            option.value = district;
+            option.textContent = district;
+            districtFilter.appendChild(option);
+        });
+
+        [...brands].sort().forEach(brand => {
+            const option = document.createElement('option');
+            option.value = brand;
+            option.textContent = brand;
+            brandFilter.appendChild(option);
+        });
+
+        // --- Filter Logic ---
+        function applyFilters() {
+            const selectedDistrict = districtFilter.value;
+            const selectedBrand = brandFilter.value;
+
+            rows.forEach(row => {
+                const cells = row.getElementsByTagName('td');
+                let districtMatch = true;
+                let brandMatch = true;
+
+                if (cells.length >= 3) {
+                     // District Check (Cell 1)
+                    if (selectedDistrict !== 'all' && cells[1].textContent.trim() !== selectedDistrict) {
+                        districtMatch = false;
+                    }
+                     // Brand Check (Cell 0)
+                    if (selectedBrand !== 'all' && cells[0].textContent.trim() !== selectedBrand) {
+                        brandMatch = false;
+                    }
+                } else {
+                    // Hide rows that don't have enough cells (e.g., header or malformed)
+                    districtMatch = false;
+                    brandMatch = false;
+                }
+
+
+                // Show/Hide Row
+                if (districtMatch && brandMatch) {
+                    row.style.display = ''; // Show row
+                } else {
+                    row.style.display = 'none'; // Hide row
+                }
+            });
+        }
+
+        // --- Event Listeners ---
+        districtFilter.addEventListener('change', applyFilters);
+        brandFilter.addEventListener('change', applyFilters);
+
+        // Initial filter application (optional, if you want it filtered on load based on default 'all')
+        // applyFilters();
+
+    </script>
+
+</body>
+</html>
